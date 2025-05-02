@@ -11,7 +11,7 @@
 
 .section-header {
   @include m.section-header;
-
+  
   .section-description {
     max-width: 700px;
     margin: 0 auto;
@@ -26,7 +26,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
-
+  
   @include m.respond-to(lg) {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -39,7 +39,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
-
+  
   @include m.respond-to(sm) {
     grid-template-columns: 1fr;
   }
@@ -48,7 +48,7 @@
 .contact-item {
   display: flex;
   margin-bottom: 2rem;
-
+  
   @include m.respond-to(lg) {
     flex-direction: column;
     align-items: center;
@@ -63,12 +63,12 @@
   border-radius: 50%;
   @include m.flex;
   margin-right: 1.5rem;
-
+  
   i {
     font-size: 1.2rem;
     color: v.$primary-color;
   }
-
+  
   @include m.respond-to(lg) {
     margin-right: 0;
     margin-bottom: 1rem;
@@ -81,7 +81,7 @@
     font-size: map.get(v.$font-sizes, medium);
     margin-bottom: 0.5rem;
   }
-
+  
   p {
     color: v.$text-color;
   }
@@ -91,12 +91,12 @@
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-
+  
   @include m.respond-to(lg) {
     grid-column: 1 / -1;
     justify-content: center;
   }
-
+  
   a {
     width: 40px;
     height: 40px;
@@ -105,12 +105,12 @@
     border-radius: 50%;
     @include m.flex;
     @include m.transition;
-
+    
     &:hover {
       background-color: v.$primary-dark;
       transform: translateY(-3px);
     }
-
+    
     i {
       font-size: 1.2rem;
     }
@@ -133,37 +133,36 @@
 .form-group {
   display: flex;
   flex-direction: column;
-
+  
   label {
     margin-bottom: 0.5rem;
     color: v.$secondary-color;
     font-weight: 500;
   }
-
-  input,
-  textarea {
+  
+  input, textarea {
     padding: 0.8rem 1rem;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     font-family: inherit;
     font-size: 1rem;
     @include m.transition;
-
+    
     &:focus {
       outline: none;
       border-color: v.$primary-color;
       box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
     }
-
+    
     &.error {
       border-color: #e74c3c;
     }
   }
-
+  
   textarea {
     resize: vertical;
   }
-
+  
   .error-message {
     color: #e74c3c;
     font-size: 0.875rem;
@@ -183,15 +182,15 @@
   @include m.flex;
   gap: 0.5rem;
   align-self: flex-start;
-
+  
   &:hover {
     background-color: v.$primary-dark;
   }
-
+  
   i {
     font-size: 0.9rem;
   }
-
+  
   @include m.respond-to(sm) {
     align-self: stretch;
   }
@@ -200,13 +199,13 @@
 .success-message {
   text-align: center;
   padding: 2rem;
-
+  
   i {
     font-size: 3rem;
     color: #2ecc71;
     margin-bottom: 1rem;
   }
-
+  
   p {
     color: v.$secondary-color;
     font-size: 1.1rem;

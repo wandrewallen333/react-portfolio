@@ -1,11 +1,15 @@
 // _variables.scss
-$primary-color: #0070f3;
-$primary-dark: #0051a9;
-$secondary-color: #333;
-$text-color: #555;
-$light-color: #fff;
-$bg-color: #f8f9fa;
-$footer-bg: #222;
+// Dark mode color palette
+$primary-color: #00a8ff;      // Bright blue - stands out in dark mode
+$primary-dark: #0084c7;       // Darker blue for hover states
+$secondary-color: #f0f0f0;    // Light gray for headings
+$text-color: #b0b0b0;         // Muted gray for body text
+$light-color: #1a1a1a;        // Dark card background
+$bg-color: #121212;           // Main dark background
+$footer-bg: #0a0a0a;          // Darker background for footer
+$card-bg: #1e1e1e;            // Slightly lighter than bg for cards
+$border-color: #2c2c2c;       // Subtle borders
+$error-color: #e74c3c;        // Red for errors
 
 // Typography
 $font-family: 'Poppins', sans-serif;

@@ -1,4 +1,5 @@
 // main.scss
+@use 'sass:map';
 @use 'variables' as v;
 @use 'mixins' as m;
 @use 'reset';
@@ -24,4 +25,68 @@ section {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+// Dark mode specific elements
+.section-header {
+  h2 {
+    color: v.$secondary-color;
+  }
+  
+  .section-description {
+    color: v.$text-color;
+  }
+}
+
+// For card-like elements
+.card {
+  background-color: v.$card-bg;
+  border: 1px solid v.$border-color;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+// Links
+a {
+  color: v.$primary-color;
+  
+  &:hover {
+    color: v.$primary-dark;
+  }
+}
+
+// Buttons
+.btn {
+  background-color: v.$primary-color;
+  color: #ffffff;
+  
+  &:hover {
+    background-color: v.$primary-dark;
+  }
+  
+  &.secondary-btn {
+    background-color: transparent;
+    border: 2px solid v.$primary-color;
+    color: v.$primary-color;
+    
+    &:hover {
+      background-color: rgba(0, 168, 255, 0.1);
+    }
+  }
+}
+
+// Form elements
+input, textarea, select {
+  background-color: v.$card-bg;
+  border: 1px solid v.$border-color;
+  color: v.$secondary-color;
+  
+  &:focus {
+    border-color: v.$primary-color;
+    box-shadow: 0 0 0 2px rgba(0, 168, 255, 0.2);
+  }
+}
+
+// Subtle separators
+hr {
+  border-color: v.$border-color;
 }

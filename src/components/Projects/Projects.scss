@@ -38,22 +38,23 @@
 }
 
 .project-card {
-  background-color: v.$light-color;
+  background-color: v.$card-bg;
+  border: 1px solid v.$border-color;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  @include m.transition;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-
-    .project-links {
-      opacity: 1;
-    }
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
+  h3 {
+    color: v.$secondary-color;
+  }
+  
+  .project-description {
+    color: v.$text-color;
+  }
+  
+  .technology-tag {
+    background-color: rgba(0, 168, 255, 0.15);
+    color: v.$primary-color;
   }
 }
 
@@ -75,16 +76,16 @@
 }
 
 .project-links {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  @include m.flex(row, center, center);
-  gap: 1.5rem;
-  opacity: 0;
-  @include m.transition;
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  .project-link {
+    background-color: v.$primary-color;
+    color: #ffffff;
+    
+    &:hover {
+      background-color: v.$primary-dark;
+    }
+  }
 }
 
 .project-link {
