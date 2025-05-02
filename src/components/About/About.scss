@@ -1,0 +1,175 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.about-container {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.underline {
+  height: 4px;
+  width: 70px;
+  background-color: #0070f3;
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h3 {
+  color: #0070f3;
+  margin: 1.5rem 0 0.8rem;
+  font-size: 1.5rem;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.skills-container {
+  margin: 2rem 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skill-category h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #555;
+}
+
+.skills-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #0070f3;
+}
+
+.education-experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.timeline-item p {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.timeline-item ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.timeline-item li {
+  position: relative;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.timeline-item li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0070f3;
+}
+
+.cta-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #0051a9;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .skills-grid,
+  .education-experience {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-header h2 {
+    font-size: 2rem;
+  }
+}

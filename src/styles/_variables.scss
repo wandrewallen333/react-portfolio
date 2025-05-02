@@ -1,0 +1,29 @@
+// _variables.scss
+$primary-color: #0070f3;
+$primary-dark: #0051a9;
+$secondary-color: #333;
+$text-color: #555;
+$light-color: #fff;
+$bg-color: #f8f9fa;
+$footer-bg: #222;
+
+// Typography
+$font-family: 'Poppins', sans-serif;
+$heading-font: 'Montserrat', sans-serif;
+$font-sizes: (
+  small: 0.875rem,
+  normal: 1rem,
+  medium: 1.25rem,
+  large: 1.5rem,
+  xlarge: 2rem,
+  xxlarge: 2.5rem,
+  huge: 3.5rem
+);
+
+// Breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);

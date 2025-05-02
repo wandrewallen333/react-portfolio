@@ -1,0 +1,55 @@
+// Footer.scss
+@use 'sass:map'; 
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.footer {
+  background-color: v.$footer-bg;
+  color: v.$light-color;
+  padding: 3rem 2rem 1.5rem;
+  position: relative;
+  
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    @include m.respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include m.respond-to(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &-section {
+    h3 {
+      color: v.$primary-color;
+      margin-bottom: 1.2rem;
+      font-size: map.get(v.$font-sizes, large);
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+    
+    &.about {
+      grid-column: span 1;
+      
+      @include m.respond-to(lg) {
+        grid-column: span 2;
+      }
+      
+      @include m.respond-to(md) {
+        grid-column: span 1;
+      }
+    }
+    
+    // Rest of your footer styles...
+  }
+}

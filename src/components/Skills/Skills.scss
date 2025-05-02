@@ -1,0 +1,144 @@
+// Skills.scss
+@use 'sass:map';
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.skills-container {
+  @include m.section-padding;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  @include m.section-header;
+
+  .section-description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: v.$text-color;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}
+
+.skills-content {
+  margin-top: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  @include m.respond-to(md) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.skill-category {
+  h3 {
+    color: v.$secondary-color;
+    font-size: map.get(v.$font-sizes, large);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid v.$primary-color;
+  }
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skill-item {
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    .skill-name {
+      font-weight: 500;
+      color: v.$secondary-color;
+    }
+
+    .skill-percentage {
+      color: v.$primary-color;
+      font-weight: 600;
+    }
+  }
+
+  .skill-progress-bg {
+    height: 8px;
+    background-color: #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .skill-progress-fill {
+      height: 100%;
+      background-color: v.$primary-color;
+      border-radius: 4px;
+      @include m.transition(width, 1s, ease-out);
+    }
+  }
+}
+
+.skills-additional {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: v.$light-color;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    color: v.$secondary-color;
+    font-size: map.get(v.$font-sizes, large);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: v.$text-color;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .currently-learning {
+    margin-top: 1.5rem;
+
+    h4 {
+      color: v.$secondary-color;
+      font-size: map.get(v.$font-sizes, medium);
+      margin-bottom: 1rem;
+    }
+  }
+
+  .learning-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .learning-tag {
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 112, 243, 0.1);
+    color: v.$primary-color;
+    border-radius: 20px;
+    font-weight: 500;
+    display: inline-block;
+  }
+}
+
+// Add animation for skill bars
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--skill-percentage);
+  }
+}
+
+// Optional: Add intersection observer for animation
+// This can be implemented using JavaScript

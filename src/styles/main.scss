@@ -1,0 +1,27 @@
+// main.scss
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'reset';
+@use 'animations';
+
+// Global styles
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: v.$font-family;
+  line-height: 1.6;
+  color: v.$text-color;
+  background-color: v.$bg-color;
+}
+
+section {
+  min-height: 100vh;
+  @include m.section-padding;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
